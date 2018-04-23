@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:text="@string/app_name" />
+ 
+    <ScrollView 
+         android:id="@+id/scroll_description"
+         android:layout_width="match_parent"
+	     android:layout_height="80dp"
+        >
+        <LinearLayout 
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:gravity="right"
+	     android:orientation="vertical"
+	    >
+	    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_margin="10dp"
+        android:textSize="25sp"
+        android:layout_gravity="right"
+        android:text="@string/description" />
+        </LinearLayout>
+            
+        
+    </ScrollView>
+ 	
+    
+	<LinearLayout 
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:gravity="right"
+	     android:layout_margin="10dp"
+	     android:orientation="horizontal"
+	    >
+	
+			    <TextView
+			        android:id="@+id/turn"
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:layout_weight="1"
+			        android:gravity="center"
+			        android:layout_margin="5dp"
+			        android:textStyle="bold"
+			        android:textSize="20sp"
+			        android:background="@drawable/background_turn_player"
+			        android:text="התור של" />
+			
+			    
+			    
+			    <ImageView
+			        android:id="@+id/image_box"
+			        android:layout_width="70dp"
+			        android:layout_height="70dp"
+			        android:src="@drawable/icon" />
+			    <TextView
+			        android:id="@+id/size"
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:gravity="center"
+			        android:textSize="35sp"
+			        android:text="x25" />
+			    
+	</LinearLayout>
+	    
+   <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:layout_weight="1" 
+        android:layout_marginTop="50dp"
+        >
+ 
+        <LinearLayout
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:orientation="vertical" >
+		            
+             <LinearLayout
+		            android:id="@+id/linearLayout_horizontalScrollView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_weight="0.2" 
+		            android:orientation="horizontal" >
+		            
+		        </LinearLayout>
+		        
+             <LinearLayout
+		            android:id="@+id/linearLayout_horizontalScrollView_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_weight="0.8" 
+		            android:orientation="horizontal" >
+		            
+             </LinearLayout>
+             
+       </LinearLayout>
+		            
+   </HorizontalScrollView>
+            
+	<LinearLayout 
+	     android:layout_width="match_parent"
+	     android:layout_height="match_parent"
+	     android:gravity="bottom"
+	     android:layout_weight="1"
+	     android:orientation="vertical"
+	    >
+
+		<GridView
+		    android:id="@+id/gridView_matches"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1" 
+		    android:numColumns="10"
+		    android:visibility="gone" >
+	    
+		</GridView>
+
+			    <Button
+			        android:id="@+id/btn_take"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginRight="3dp"
+			        android:text="קח גפרורים"
+			        android:textSize="25sp"
+			        android:textColor="@android:color/white" 
+			        android:background="@drawable/background_button_get"
+			        />
+	    
+	</LinearLayout>
+    
+    
+</LinearLayout>

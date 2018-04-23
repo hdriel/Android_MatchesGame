@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_setting"
+    android:paddingLeft="14dp" 
+    android:paddingRight="14dp"
+    android:layout_margin="5dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:text="הגדרות" />
+
+     <View
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dip"
+	    android:background="#000000" />
+     
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="1dp" >
+
+        <TableRow 
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+   		     android:layout_height="wrap_content"
+            >
+
+            <TextView
+		        android:id="@+id/vs"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:layout_weight="0.7"
+		        android:textSize="20sp"
+		        android:text="מי מול מי : " />
+		            
+        </TableRow>
+        
+         <TableRow 
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+   		     android:layout_height="wrap_content"
+            >
+
+		                    
+             <RadioGroup
+			    android:id="@+id/radios_vs"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_alignParentLeft="false"
+			    android:gravity="right"
+			    android:inputType="text"
+			    android:layout_weight="0.9"
+			    android:orientation="horizontal" >
+                
+		            
+		            <RadioButton
+		                android:id="@+id/rb_vsHuman"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="start"
+		                android:layoutDirection="rtl"
+                        android:drawableRight="@android:drawable/btn_radio"
+		                android:gravity="center"
+		                android:layout_weight="1"
+		                android:text="אדם מול אדם"
+		                android:button="@null"
+		                android:onClick="onRadioButton_vs_Clicked"
+                         />
+		            
+		            <RadioButton
+		                android:id="@+id/rb_vsComputer"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="start"
+		                android:button="@null"
+		                android:checked="true"
+		                android:drawableRight="@android:drawable/btn_radio"
+		                android:gravity="center"
+		                android:layoutDirection="rtl"
+		                android:layout_weight="1"
+		                android:text="אדם מול מחשב"
+		                android:onClick="onRadioButton_vs_Clicked"
+		                 />
+
+            </RadioGroup>
+            
+        </TableRow>
+        
+        
+        <TableRow
+             android:layout_weight="1" 
+             android:layout_width="match_parent"
+   		     android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:id="@+id/et_name_playerA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:ems="10"
+                android:inputType="textPersonName" 
+                android:hint="א\'"
+                android:gravity="center">
+				
+                <requestFocus />
+            </EditText>
+          
+            <TextView
+		        android:id="@+id/name_player_A"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:layout_weight="0.3"
+		        android:textSize="20sp"
+		        android:text="שם שחקן א: " />
+		            
+        </TableRow>
+        
+        <TableRow 
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+   		     android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:id="@+id/et_name_playerB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="ב\'" 
+                android:gravity="center">
+
+                <requestFocus />
+            </EditText>
+          
+            <TextView
+		        android:id="@+id/name_player_B"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:layout_weight="0.3"
+		        android:textSize="20sp"
+		        android:text="שם שחקן ב: "
+		         />
+		            
+        </TableRow>
+        
+        <TableRow 
+             android:layout_weight="0.8"
+             android:layout_width="match_parent"
+   		     android:layout_height="wrap_content"
+            >
+            
+              <TextView
+		        android:id="@+id/start"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:layout_weight="0.1"
+		        android:textSize="20sp"
+		        android:text="מי מתחיל ראשון : " />
+        </TableRow>
+        
+         
+        <TableRow 
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+   		     android:layout_height="wrap_content"
+            >
+
+		                    
+             <RadioGroup
+			    android:id="@+id/radios_start"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_alignParentLeft="false"
+			    android:gravity="right"
+			    android:inputType="text"
+			    android:layout_weight="0.9"
+			    android:orientation="horizontal" >
+                
+		            
+		            <RadioButton
+		                android:id="@+id/rb_start_B"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="start"
+		                android:layoutDirection="rtl"
+                        android:drawableRight="@android:drawable/btn_radio"
+		                android:gravity="center"
+		                android:layout_weight="1"
+		                android:text="שחקן ב"
+		                android:button="@null"
+		                android:onClick="onRadioButton_start_Clicked"
+                         />
+		            
+		            <RadioButton
+		                android:id="@+id/rb_start_A"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="start"
+		                android:button="@null"
+		                android:checked="true"
+		                android:drawableRight="@android:drawable/btn_radio"
+		                android:gravity="center"
+		                android:layoutDirection="rtl"
+		                android:layout_weight="1"
+		                android:text="שחקן א"
+		                android:onClick="onRadioButton_start_Clicked"
+		                 />
+		
+
+            </RadioGroup>
+            
+        </TableRow>
+        
+        <TableRow 
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+   		     android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:id="@+id/et_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:ems="10"
+                android:inputType="number"
+                android:gravity="center"
+                android:hint="15" >
+
+                <requestFocus />
+            </EditText>
+          
+            <TextView
+		        android:id="@+id/size"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:layout_weight="0.01"
+		        android:textSize="20sp"
+		        android:text="כמות הגפרורים : " />
+		            
+        </TableRow>
+        
+         <TableRow 
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+   		     android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:id="@+id/et_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:ems="10"
+                android:inputType="number" 
+                android:gravity="center"
+                android:hint="3">
+
+                <requestFocus />
+            </EditText>
+          
+            <TextView
+		        android:id="@+id/max"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:layout_weight="0.01"
+		        android:textSize="15sp"
+		        android:text="מקס גפרורים  במשיכה : " />
+		            
+        </TableRow>
+
+         
+         
+    </TableLayout>
+
+    <View
+    android:layout_width="fill_parent"
+    android:layout_height="1dip"
+    android:background="#000000" />
+    
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="?attr/selectableItemBackground"
+        android:text="שמור" />
+
+</LinearLayout>

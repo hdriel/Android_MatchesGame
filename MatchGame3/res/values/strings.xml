@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">משחק גפרורים</string>
+    <string name="description">
+         הוראות:\n
+         המשחק הוא לשני שחקנים.\n
+         שמים על השולחן n גפרורים.\n 
+        כל שחקן בתורו יכול לקחת בין 1 ל-k גפרורים.\n
+        מי שלוקח את הגפרור האחרון (כך שלשני לא נותר אף גפרור) מנצח.\n\n
+        לדוגמה, שמים 25 גפרורים (n=25) ויש לקחת מ-1 עד 3 גפרורים במהלך אחד (k=3).
+        </string>
+    <string name="kayback_again">לחץ על הכפתור BACK שוב כדי לצאת.</string>
+    <string name="action_about">אודות</string>
+    <string name="action_settings">הגדרות</string>
+
+    <string name="mode_prompt">בחר מול מי לשחק</string>
+    <string-array name="mode_game">
+ 	    <item>מחשב מול אדם</item>
+        <item>אדם מול אדם</item>
+    </string-array>
+    
+    
+</resources>
